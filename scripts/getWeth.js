@@ -7,10 +7,12 @@ async function getWeth() {
   // call the "deposit" function on the weth contract
   // abi, contract address
   // weth mainnet contract address: 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+  const signer = await ethers.getSigner(deployer);
   const iWeth = await ethers.getContractAt(
     "IWeth",
+    // can fork the mainnet and run a local hh node pretending to be the mainnet
     "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-    deployer
+    signer
   );
 
   // deposit 0.02 ETH

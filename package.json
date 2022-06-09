@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@aave/protocol-v2": "^1.0.1",
     "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers",
     "@nomiclabs/hardhat-etherscan": "^3.0.4",
     "@nomiclabs/hardhat-waffle": "^2.0.3",
@@ -14,9 +15,10 @@
     "prettier": "^2.6.2",
     "prettier-plugin-solidity": "^1.0.0-beta.19",
     "solhint": "^3.3.7",
-    "solidity-coverage": "^0.7.21"
+    "solidity-coverage": "^0.7.18"
   },
   "dependencies": {
-    "@appliedblockchain/chainlink-plugins-fund-link": "^0.0.3"
+    "@appliedblockchain/chainlink-plugins-fund-link": "^0.0.3",
+    "hardhat-deploy-ethers": "^0.3.0-beta.13"
   }
 }
