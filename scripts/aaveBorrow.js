@@ -46,6 +46,17 @@ async function main() {
   const daiTokenAddress = "0x6B175474E89094C44Da98b954EedeAC495271d0F";
   await borrowDai(daiTokenAddress, lendingPool, amountDaiToBorrowWei, deployer);
   await getBorrowUserData(lendingPool, deployer);
+  await repay(amountDaiToBorrowWei, daiTokenAddress, lendingPool, deployer);
+  await getBorrowUserData(lendingPool, deployer);
+}
+
+async function repay(amount, daiAddress, lendingPool, account) {
+  const signedDeployer = await ethers.getSigner(account);
+  // approve sending money back
+  await approveErc20(daiAddress, lendingPool.address, amount, signedDeployer);
+  // actually send it back
+  const repayTx = await lendingPool.repay(daiAddress, amount, 1, account);
+  console.log("Repaid!");
 }
 
 async function borrowDai(daiAddress, lendingPool, amountDaiToBorrow, account) {
