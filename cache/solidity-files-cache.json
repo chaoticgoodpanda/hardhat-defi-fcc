@@ -171,6 +171,352 @@
       "artifacts": [
         "DataTypes"
       ]
+    },
+    "/Users/michaellwin.pactum/Dropbox/hackerz/hardhat-defi-fcc/contracts/interfaces/IERC20.sol": {
+      "lastModificationDate": 1654804721175,
+      "contentHash": "922069ff925ca9edf8e702dc3910f172",
+      "sourceName": "contracts/interfaces/IERC20.sol",
+      "solcConfig": {
+        "version": "0.6.12",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.6.6"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/Users/michaellwin.pactum/Dropbox/hackerz/hardhat-defi-fcc/contracts/interfaces/AggregatorV3Interface.sol": {
+      "lastModificationDate": 1654813092514,
+      "contentHash": "c9ce8c6ab155754d947f755926175418",
+      "sourceName": "contracts/interfaces/AggregatorV3Interface.sol",
+      "solcConfig": {
+        "version": "0.8.7",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "AggregatorV3Interface"
+      ]
+    },
+    "/Users/michaellwin.pactum/Dropbox/hackerz/hardhat-defi-fcc/contracts/interfaces/IComptroller.sol": {
+      "lastModificationDate": 1654849324999,
+      "contentHash": "77030e743a5e689abaf41e3c32360d2a",
+      "sourceName": "contracts/interfaces/IComptroller.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./IOToken.sol",
+        "./PriceOracle.sol"
+      ],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "IComptroller"
+      ]
+    },
+    "/Users/michaellwin.pactum/Dropbox/hackerz/hardhat-defi-fcc/contracts/interfaces/IOToken.sol": {
+      "lastModificationDate": 1654849352259,
+      "contentHash": "2a4a67873079a8e7cdce97edec174a8d",
+      "sourceName": "contracts/interfaces/IOToken.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./IInterestRateModel.sol",
+        "./IEIP20NonStandard.sol",
+        "./IEIP20.sol",
+        "./IComptroller.sol"
+      ],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "IOToken"
+      ]
+    },
+    "/Users/michaellwin.pactum/Dropbox/hackerz/hardhat-defi-fcc/contracts/interfaces/PriceOracle.sol": {
+      "lastModificationDate": 1654849313134,
+      "contentHash": "da6cea7e3ee7aa8967fe263482ad1c65",
+      "sourceName": "contracts/interfaces/PriceOracle.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./IOToken.sol"
+      ],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "PriceOracle"
+      ]
+    },
+    "/Users/michaellwin.pactum/Dropbox/hackerz/hardhat-defi-fcc/contracts/interfaces/IInterestRateModel.sol": {
+      "lastModificationDate": 1654849246239,
+      "contentHash": "b924de7a2e5b2b3e28a90c5af27c2c0c",
+      "sourceName": "contracts/interfaces/IInterestRateModel.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "IInterestRateModel"
+      ]
+    },
+    "/Users/michaellwin.pactum/Dropbox/hackerz/hardhat-defi-fcc/contracts/interfaces/IEIP20NonStandard.sol": {
+      "lastModificationDate": 1654849380385,
+      "contentHash": "d54a71441f5cf16355bde5dad32fa8d6",
+      "sourceName": "contracts/interfaces/IEIP20NonStandard.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "IEIP20NonStandard"
+      ]
+    },
+    "/Users/michaellwin.pactum/Dropbox/hackerz/hardhat-defi-fcc/contracts/interfaces/IEIP20.sol": {
+      "lastModificationDate": 1654849195691,
+      "contentHash": "5e920345f925b1f4a40058debccc8021",
+      "sourceName": "contracts/interfaces/IEIP20.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "IEIP20"
+      ]
     }
   }
 }
