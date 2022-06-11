@@ -1152,6 +1152,96 @@
       "artifacts": [
         "OErc20"
       ]
+    },
+    "/Users/michaellwin.pactum/Dropbox/hackerz/hardhat-defi-fcc/contracts/interfaces/OvixChainlinkOracleV2.sol": {
+      "lastModificationDate": 1654951775074,
+      "contentHash": "9581642551a980f28064f3f2af1ed49c",
+      "sourceName": "contracts/interfaces/OvixChainlinkOracleV2.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./PriceOracle.sol",
+        "./OErc20.sol",
+        "./IEIP20.sol",
+        "./SafeMath.sol",
+        "./IAggregatorV2V3.sol"
+      ],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "OvixChainlinkOracleV2"
+      ]
+    },
+    "/Users/michaellwin.pactum/Dropbox/hackerz/hardhat-defi-fcc/contracts/interfaces/SafeMath.sol": {
+      "lastModificationDate": 1654951788164,
+      "contentHash": "ffe61f16572abbf6bfc9ecb034fbb08e",
+      "sourceName": "contracts/interfaces/SafeMath.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
     }
   }
 }
