@@ -24,7 +24,7 @@ const KOVAN_RPC_URL =
   "https://eth-kovan.alchemyapi.io/v2/your-api-key";
 const POLYGON_MAINNET_RPC_URL =
   process.env.POLYGON_MAINNET_RPC_URL ||
-  "https://polygon-mainnet.alchemyapi.io/v2/your-api-key";
+  "https://polygon-mainnet.infura.io/v3/afac4b899a704db2b66e9d7cef3be714";
 const PRIVATE_KEY =
   process.env.PRIVATE_KEY ||
   "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80";
@@ -62,6 +62,12 @@ module.exports = {
       //   },
       saveDeployments: true,
       chainId: 4,
+    },
+    polygon: {
+      url: POLYGON_MAINNET_RPC_URL,
+      accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
+      saveDeployments: true,
+      chainId: 137,
     },
   },
   etherscan: {

@@ -173,11 +173,11 @@
       ]
     },
     "/Users/michaellwin.pactum/Dropbox/hackerz/hardhat-defi-fcc/contracts/interfaces/IERC20.sol": {
-      "lastModificationDate": 1654804721175,
-      "contentHash": "922069ff925ca9edf8e702dc3910f172",
+      "lastModificationDate": 1654940920917,
+      "contentHash": "f1c8508f54ceb5d121268b0dbe72f0a8",
       "sourceName": "contracts/interfaces/IERC20.sol",
       "solcConfig": {
-        "version": "0.6.12",
+        "version": "0.8.7",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -208,7 +208,7 @@
       },
       "imports": [],
       "versionPragmas": [
-        "^0.6.6"
+        "^0.8.4"
       ],
       "artifacts": [
         "IERC20"
@@ -516,6 +516,641 @@
       ],
       "artifacts": [
         "IEIP20"
+      ]
+    },
+    "/Users/michaellwin.pactum/Dropbox/hackerz/hardhat-defi-fcc/contracts/interfaces/Comptroller.sol": {
+      "lastModificationDate": 1654940809782,
+      "contentHash": "1206c2bbdeeeb6051977d3fb871d264b",
+      "sourceName": "contracts/interfaces/Comptroller.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./ErrorReporter.sol",
+        "./ExponentialNoError.sol",
+        "./IComptroller.sol",
+        "./ComptrollerStorage.sol"
+      ],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "Comptroller",
+        "I0vix",
+        "IUnitroller"
+      ]
+    },
+    "/Users/michaellwin.pactum/Dropbox/hackerz/hardhat-defi-fcc/contracts/interfaces/ErrorReporter.sol": {
+      "lastModificationDate": 1654940667189,
+      "contentHash": "35be02d5ba21cb8964d898c290b2dab8",
+      "sourceName": "contracts/interfaces/ErrorReporter.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "ComptrollerErrorReporter",
+        "TokenErrorReporter"
+      ]
+    },
+    "/Users/michaellwin.pactum/Dropbox/hackerz/hardhat-defi-fcc/contracts/interfaces/ExponentialNoError.sol": {
+      "lastModificationDate": 1654940667082,
+      "contentHash": "c63a668d82a6201474008216f5b73f46",
+      "sourceName": "contracts/interfaces/ExponentialNoError.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "ExponentialNoError"
+      ]
+    },
+    "/Users/michaellwin.pactum/Dropbox/hackerz/hardhat-defi-fcc/contracts/interfaces/ComptrollerStorage.sol": {
+      "lastModificationDate": 1654940825513,
+      "contentHash": "94f2f0ccee7613ed68860b49fe34596b",
+      "sourceName": "contracts/interfaces/ComptrollerStorage.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./IOToken.sol",
+        "./PriceOracle.sol",
+        "./IBoostManager.sol",
+        "./IComptroller.sol",
+        "./UnitrollerAdminStorage.sol"
+      ],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "ComptrollerV1Storage",
+        "ComptrollerV2Storage",
+        "ComptrollerV3Storage",
+        "ComptrollerV4Storage",
+        "ComptrollerV5Storage",
+        "ComptrollerV6Storage",
+        "ComptrollerV7Storage"
+      ]
+    },
+    "/Users/michaellwin.pactum/Dropbox/hackerz/hardhat-defi-fcc/contracts/interfaces/IBoostManager.sol": {
+      "lastModificationDate": 1654940724079,
+      "contentHash": "f5fd129bb42d5b6098f353b6c05450e0",
+      "sourceName": "contracts/interfaces/IBoostManager.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol"
+      ],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "IBoostManager"
+      ]
+    },
+    "/Users/michaellwin.pactum/Dropbox/hackerz/hardhat-defi-fcc/contracts/interfaces/UnitrollerAdminStorage.sol": {
+      "lastModificationDate": 1654940758149,
+      "contentHash": "d183f6591cd551dbb307f5bd464c7610",
+      "sourceName": "contracts/interfaces/UnitrollerAdminStorage.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "UnitrollerAdminStorage"
+      ]
+    },
+    "/Users/michaellwin.pactum/Dropbox/hackerz/hardhat-defi-fcc/contracts/interfaces/IAggregatorV2V3.sol": {
+      "lastModificationDate": 1654943488526,
+      "contentHash": "d72dffb5cc7a3b9755f631d79ed4d6c7",
+      "sourceName": "contracts/interfaces/IAggregatorV2V3.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "IAggregatorV2V3"
+      ]
+    },
+    "/Users/michaellwin.pactum/Dropbox/hackerz/hardhat-defi-fcc/contracts/interfaces/CarefulMath.sol": {
+      "lastModificationDate": 1654944469032,
+      "contentHash": "f7153dd0a72f3adfa85accf4e5115c22",
+      "sourceName": "contracts/interfaces/CarefulMath.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "CarefulMath"
+      ]
+    },
+    "/Users/michaellwin.pactum/Dropbox/hackerz/hardhat-defi-fcc/contracts/interfaces/Exponential.sol": {
+      "lastModificationDate": 1654944460205,
+      "contentHash": "8a0036f9f31a7637d7986a9888c2ea34",
+      "sourceName": "contracts/interfaces/Exponential.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./CarefulMath.sol",
+        "./ExponentialNoError.sol"
+      ],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "Exponential"
+      ]
+    },
+    "/Users/michaellwin.pactum/Dropbox/hackerz/hardhat-defi-fcc/contracts/interfaces/OToken.sol": {
+      "lastModificationDate": 1654944367594,
+      "contentHash": "37098c49b79429667d85e8abc83f8a35",
+      "sourceName": "contracts/interfaces/OToken.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./OTokenStorage.sol",
+        "./IComptroller.sol",
+        "./ErrorReporter.sol",
+        "./Exponential.sol",
+        "./IEIP20.sol",
+        "./IInterestRateModel.sol",
+        "./IBoostManager.sol"
+      ],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "OToken"
+      ]
+    },
+    "/Users/michaellwin.pactum/Dropbox/hackerz/hardhat-defi-fcc/contracts/interfaces/OTokenStorage.sol": {
+      "lastModificationDate": 1654944439115,
+      "contentHash": "cdc346e12b2c59b7fac46d745c1dc66b",
+      "sourceName": "contracts/interfaces/OTokenStorage.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./IEIP20NonStandard.sol",
+        "./IOToken.sol",
+        "./IERC20.sol",
+        "./IComptroller.sol",
+        "./IInterestRateModel.sol"
+      ],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "OTokenStorage"
+      ]
+    },
+    "/Users/michaellwin.pactum/Dropbox/hackerz/hardhat-defi-fcc/contracts/interfaces/IOErc20.sol": {
+      "lastModificationDate": 1654944618030,
+      "contentHash": "a447ec9820b3e15a88bb73fadf97de12",
+      "sourceName": "contracts/interfaces/IOErc20.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./IEIP20NonStandard.sol",
+        "./IOToken.sol"
+      ],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "IOErc20"
+      ]
+    },
+    "/Users/michaellwin.pactum/Dropbox/hackerz/hardhat-defi-fcc/contracts/interfaces/OErc20Storage.sol": {
+      "lastModificationDate": 1654944553486,
+      "contentHash": "d3836296bb1d70b33d8cc7a57a1d036c",
+      "sourceName": "contracts/interfaces/OErc20Storage.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./IOErc20.sol"
+      ],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "OErc20Storage"
+      ]
+    },
+    "/Users/michaellwin.pactum/Dropbox/hackerz/hardhat-defi-fcc/contracts/interfaces/OErc20.sol": {
+      "lastModificationDate": 1654944302845,
+      "contentHash": "6374c3febdf726dd35903346bebd8c8c",
+      "sourceName": "contracts/interfaces/OErc20.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./OToken.sol",
+        "./OErc20Storage.sol"
+      ],
+      "versionPragmas": [
+        "0.8.4"
+      ],
+      "artifacts": [
+        "OErc20"
       ]
     }
   }

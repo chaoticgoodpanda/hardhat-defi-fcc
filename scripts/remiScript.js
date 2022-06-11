@@ -1,16 +1,11 @@
 const { getNamedAccounts, ethers, waffle } = require("hardhat");
-const Web3 = require("web3");
 const compiledFactory = require("../artifacts/contracts/interfaces/IERC20.sol/IERC20.json");
 
-const web3 = new Web3(Web3.givenProvider);
-
 async function main() {
-  const erc20Abi = "IComptroller";
-  const contractAddress = "0xa85c9A5464955481c47247d58776BC086127c061";
-  const provider = waffle.provider;
+  const erc20Abi = "Comptroller";
+  const contractAddress = "0x8849f1a0cB6b5D6076aB150546EddEe193754F1C";
   const { deployer } = await getNamedAccounts();
   const signedDeployer = await ethers.getSigner(deployer);
-  const signedDeployers = await ethers.getSigners();
 
   const iErc = await ethers.getContractAt(
     erc20Abi,
@@ -18,7 +13,14 @@ async function main() {
     contractAddress,
     signedDeployer
   );
-  console.log(iErc);
+  // console.log(iErc);
+  await getAccountLiquidity(iErc);
+}
+
+async function getAccountLiquidity(account) {
+  const liquidity = await account.getAllMarkets();
+  console.log(`The current liquidity is ${liquidity.toString()}`);
+  return liquidity;
 }
 
 main()
