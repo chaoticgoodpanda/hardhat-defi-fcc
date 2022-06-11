@@ -1,5 +1,5 @@
-const { getNamedAccounts, ethers, waffle } = require("hardhat");
-const compiledFactory = require("../artifacts/contracts/interfaces/IERC20.sol/IERC20.json");
+const { getNamedAccounts, ethers } = require("hardhat");
+const { BigNumber, ethers: ethers2 } = require("ethers");
 
 async function main() {
   const erc20Abi = "Comptroller";
@@ -30,33 +30,78 @@ async function main() {
     const balance = await getBalance(marketContract);
     console.log(await getBorrowValue(marketContract, signedDeployer));
   }
+  // console.log(await getSuppliedValue());
+}
+
+async function getSuppliedValue() {
+  const erc20Abi = "Comptroller";
+  const { deployer } = await getNamedAccounts();
+  const signedDeployer = await ethers.getSigner(deployer);
+  const supply = "0xEBb865Bf286e6eA8aBf5ac97e1b56A76530F3fBe";
+
+  const supplyBalanceContract = await ethers.getContractAt(
+    erc20Abi,
+    // can fork the mainnet and run a local hh node pretending to be the mainnet
+    supply,
+    signedDeployer
+  );
+
+  const provider = new ethers2.providers.getDefaultProvider(
+    "https://polygon-mainnet.infura.io/v3/afac4b899a704db2b66e9d7cef3be714"
+  );
+
+  const abi = [
+    " function borrowBalanceStored(address account) view returns (uint256)",
+  ];
+  const user = "0x222e90b3e08ac94c9b8eb3ee79a0a0d6a87536cb";
+  const supplyContract = new ethers2.Contract(supply, abi, provider);
+  const supplyBalance = await supplyBalanceContract.balanceOf(user);
+  console.log(`Your balance is ${supplyBalance}`);
+
+  const exchangeRateStored = await supplyContract.exchangeRateStored();
+  console.log(`Your exchange rate stored is ${exchangeRateStored}`);
 }
 
 async function getBorrowValue(contract, signedDeployer) {
   const ioTokenAbi = "IOToken";
-  const contractToken = await ethers.getContractAt(
-    ioTokenAbi,
-    contract.address,
-    signedDeployer
+  // const contractToken = await ethers.getContractAt(
+  //   ioTokenAbi,
+  //   contract.address,
+  //   signedDeployer
+  // );
+  const provider = new ethers2.providers.getDefaultProvider(
+    "https://polygon-mainnet.infura.io/v3/afac4b899a704db2b66e9d7cef3be714"
   );
 
-  const exchangeRateStored = await contractToken.exchangeRateStored();
+  const abi = [
+    " function borrowBalanceStored(address account) view returns (uint256)",
+  ];
+  const borrow = contract.address;
+  const user = "0x222e90b3e08ac94c9b8eb3ee79a0a0d6a87536cb";
+  const borrowContract = new ethers2.Contract(borrow, abi, provider);
+  const borrowBalance = await borrowContract.borrowBalanceStored(user);
+
+  // const exchangeRateStored = await contractToken.exchangeRateStored();
+  // console.log(`Your exchange rate stored is ${exchangeRateStored}`);
 
   const oracleAccount = await getOracle(signedDeployer);
 
-  const borrowBalance = await contractToken.borrowBalanceStored(
-    contractToken.address
-  );
-  console.log(`Your borrow balance is ${borrowBalance.toNumber()}`);
-  const oracleUnderlyingPrice = await oracleAccount.getUnderlyingPrice(
-    contractToken.address
-  );
-  console.log(parseInt(borrowBalance.toString()));
-  console.log(parseInt(oracleUnderlyingPrice.toString()));
-  const marketBorrow =
-    parseInt(oracleUnderlyingPrice.toString()) / Math.pow(1, 18);
+  // const borrowBalance = await contractToken.borrowBalanceStored(
+  //   contractToken.address
+  // );
 
-  console.log(`Your sum position is ${marketBorrow.toString()}`);
+  const BN = BigNumber.from;
+  console.log(`Your borrow balance is ${parseFloat(BN(borrowBalance))}`);
+  const oracleUnderlyingPrice = await oracleAccount.getUnderlyingPrice(borrow);
+  console.log(
+    `Your oracle underlying price is ${parseFloat(BN(oracleUnderlyingPrice))}`
+  );
+  const marketBorrow =
+    (borrowBalance * oracleUnderlyingPrice) / Math.pow(1, Math.pow(10, 18));
+
+  console.log(marketBorrow);
+
+  console.log(`Your total borrowed is ${marketBorrow.toString()}`);
 }
 
 async function getOracleUnderlyingPrice(oracle, oToken) {
